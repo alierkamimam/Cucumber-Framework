@@ -16,7 +16,7 @@ public class ProductsPage extends BasePage {
     @FindBy(xpath = "//div[@class='features_items']")
     private WebElement allProductItemsWebElement;
 
-    @FindBy(xpath = "(//a[contains(text(),'View Product')])[1]")
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a")
     private WebElement firstViewProductButton;
 
     @FindBy(xpath = "//h2[normalize-space()='Searched Products']")
@@ -43,8 +43,14 @@ public class ProductsPage extends BasePage {
     @FindBy(xpath = "//u[normalize-space()='View Cart']")
     private WebElement viewCartButton;
 
+    @FindBy(css = ".brands-name")
+    private WebElement productList;
 
 
+    public void productListDisplay() {
+        productList.isDisplayed();
+
+    }
 
     public void searchProduct(String productName) {
         searchProductBox.sendKeys(productName);
@@ -77,6 +83,7 @@ public class ProductsPage extends BasePage {
     public void clickAddToCartButton() {
         addToCartButton.click();
     }
+
     public void clickAddToCartSecondButton() {
         addToCartSecondButton.click();
     }
@@ -96,7 +103,6 @@ public class ProductsPage extends BasePage {
     public String getSearhedMenTshirt() {
         return searchedProductMenTshirt.getText();
     }
-
 
 
 }

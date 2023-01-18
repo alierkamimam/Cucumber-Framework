@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefs",
-        tags = " @VerifyAllProducts",
+        tags = " @TestCase09",
         dryRun = false
         // dryRun=true dedigimizde testi calistirmadan bize eksik adimi verir
         // dryRun=false yaparsak testi calistirir, eksik bir adimla karsilasirsa

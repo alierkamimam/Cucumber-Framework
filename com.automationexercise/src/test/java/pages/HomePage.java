@@ -56,6 +56,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//body/section/div[@class='container']/div[@class='row']/div[@class='col-sm-9 padding-right']/div[@class='features_items']/div[2]/div[1]/div[1]/div[1]")
     public WebElement firstItem;
 
+    @FindBy(id = "susbscribe_email")
+    private WebElement subscribeEmailBox;
+
+    public void setSubscribeEmailBox(String email){
+        subscribeEmailBox.sendKeys(email);
+    }
+
 
     public void clickProductsButton() {
         BrowserUtils.verifyElementDisplayed(productButton);
@@ -100,7 +107,7 @@ public class HomePage extends BasePage {
 
 
     public void clickSubscribeSubmitButton() {
-        signUpLoginButton.click();
+        subscribeSubmitButton.click();
     }
 
 

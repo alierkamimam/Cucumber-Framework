@@ -32,6 +32,16 @@ Feature:  As a automationexercise.com user I should be able to verify Test Case 
     Then Verify all the products related to search are visible
 
 
+  @TestCase10
+  Scenario: Verify Subscription in home page
+    Given the user is on the homepage
+    Then Verify that home page is visible successfully
+    When Scroll down to footer
+    Then Verify text 'SUBSCRIPTION'
+    When  Enter email 'erkam@gmail.com' in input and click arrow button
+    Then Verify success message 'You have been successfully subscribed!' is visible
+
+
 
 
 
